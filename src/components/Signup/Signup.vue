@@ -37,6 +37,10 @@
     <div class="row g-3 align-items-center">
       <div class="col-auto d-block mx-auto">
         <button class="btn btn-primary" type="submit">Sign Up Now</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary" type="button" @click="toSigninView()">
+          Sign In
+        </button>
       </div>
     </div>
     <br />
@@ -52,6 +56,11 @@ export default {
       pass: "",
       email: "",
     };
+  },
+  methods: {
+    toSigninView() {
+      this.$router.push({ name: "signin" });
+    },
   },
 };
 </script>
