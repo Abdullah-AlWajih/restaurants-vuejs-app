@@ -3,13 +3,19 @@
     <div class="row g-3 align-items-center">
       <h1>Sign Up</h1>
       <div class="col-auto d-block mx-auto">
-        <input class="form-control" placeholder="Enter your name" type="text" />
+        <input
+          v-model="name"
+          class="form-control"
+          placeholder="Enter your name"
+          type="text"
+        />
       </div>
     </div>
     <br />
     <div class="row g-3 align-items-center">
       <div class="col-auto d-block mx-auto">
         <input
+          v-model="email"
           class="form-control"
           placeholder="Enter your email"
           type="email"
@@ -20,16 +26,17 @@
     <div class="row g-3 align-items-center">
       <div class="col-auto d-block mx-auto">
         <input
+          v-model="pass"
           class="form-control"
-          placeholder="Enter your number"
-          type="tel"
+          placeholder="Enter your password"
+          type="password"
         />
       </div>
     </div>
     <br />
     <div class="row g-3 align-items-center">
       <div class="col-auto d-block mx-auto">
-        <button class="btn btn-secondary" type="submit">Sign Up Now</button>
+        <button class="btn btn-primary" type="submit">Sign Up Now</button>
       </div>
     </div>
     <br />
@@ -39,6 +46,13 @@
 <script>
 export default {
   name: "SignUpForm",
+  data() {
+    return {
+      name: "",
+      pass: "",
+      email: "",
+    };
+  },
 };
 </script>
 
