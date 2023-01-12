@@ -38,7 +38,11 @@
       <div class="col-auto d-block mx-auto">
         <button class="btn btn-primary" type="submit">Sign Up Now</button>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="btn btn-primary" type="button" @click="toSigninView()">
+        <button
+          class="btn btn-primary"
+          type="button"
+          @click="redirectTo({ value: 'signin' })"
+        >
           Sign In
         </button>
       </div>
@@ -48,6 +52,8 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "SignUpForm",
   data() {
@@ -58,9 +64,7 @@ export default {
     };
   },
   methods: {
-    toSigninView() {
-      this.$router.push({ name: "signin" });
-    },
+    ...mapActions(["redirectTo"]),
   },
 };
 </script>

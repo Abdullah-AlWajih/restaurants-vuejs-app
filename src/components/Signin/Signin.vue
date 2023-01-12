@@ -27,7 +27,11 @@
       <div class="col-auto d-block mx-auto">
         <button class="btn btn-primary" type="submit">Sign In</button>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="btn btn-primary" type="button" @click="toSigninView()">
+        <button
+          class="btn btn-primary"
+          type="button"
+          @click="redirectTo({ value: 'signup' })"
+        >
           Sign Up
         </button>
       </div>
@@ -37,15 +41,10 @@
 </template>
 
 <script>
-import signinView from "@/views/SigninView.vue";
+import { mapActions } from "vuex";
 
 export default {
   name: "SignUpForm",
-  computed: {
-    signinView() {
-      return signinView;
-    },
-  },
   data() {
     return {
       pass: "",
@@ -53,9 +52,7 @@ export default {
     };
   },
   methods: {
-    toSigninView() {
-      this.$router.push({ name: "signup" });
-    },
+    ...mapActions(["redirectTo"]),
   },
 };
 </script>
