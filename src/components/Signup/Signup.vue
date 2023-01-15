@@ -1,5 +1,5 @@
 <template>
-  <form class="g-3 needs-validation" novalidate @click.prevent>
+  <form class="g-3 needs-validation" @click.prevent>
     <div class="row g-3 align-items-center">
       <h1>Sign Up</h1>
       <div class="col-auto d-block mx-auto">

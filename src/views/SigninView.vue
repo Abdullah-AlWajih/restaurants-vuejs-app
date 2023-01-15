@@ -8,7 +8,7 @@
 import SignInForm from "@/components/Signin/Signin.vue";
 
 export default {
-  name: "SignInView",
+  name: "SigninView",
   components: { SignInForm },
 };
 </script>
